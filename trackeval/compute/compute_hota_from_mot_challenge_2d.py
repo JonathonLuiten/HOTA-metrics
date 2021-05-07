@@ -33,8 +33,8 @@ def _compute() -> dict:
     hota_score_dict = {}
 
     # Set up config files
-    eval_config = _get_costum_eval_config()
-    dataset_config = _get_costum_dataset_config()
+    eval_config = _get_custom_eval_config()
+    dataset_config = _get_custom_dataset_config()
 
     # Run code
     evaluator = Evaluator(eval_config)
@@ -43,9 +43,9 @@ def _compute() -> dict:
     hota_score_dict, _ = evaluator.evaluate(dataset_list, metrics_list)
     return hota_score_dict
 
-def _get_costum_eval_config() -> dict:
+def _get_custom_eval_config() -> dict:
     """
-    Costum eval file for computing hota with minimal output.
+    Custom eval file for computing hota with minimal output.
     See trackeval/eval.py for more informations about config
 
     Returns:
@@ -70,9 +70,9 @@ def _get_costum_eval_config() -> dict:
 
     return eval_config
 
-def _get_costum_dataset_config() -> dict:
+def _get_custom_dataset_config() -> dict:
     """
-    Costum dataset file for computing hota with minimal output.
+    Custom dataset file for computing hota with minimal output.
     See trackeval/datasets/mot_challenge_2d_box.py for more informations about
     config
 
